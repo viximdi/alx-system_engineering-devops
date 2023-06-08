@@ -1,2 +1,2 @@
 #!/bin/bash
-for file in ./*.html do if [ ! -e "../$(basename "$file")" ] then cp --parents "$file"../ elif [ "$file" -nt "../$(basename "$file") ] then cp --parents "$file" ../ fi done
+cp -u *.html ..
