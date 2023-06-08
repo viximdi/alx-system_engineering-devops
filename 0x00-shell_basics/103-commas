@@ -1,2 +1,2 @@
 #!/bin/bash
-sudo ls -am . /
+ls -p -a | awk '{printf "%s, ", $0}' | sed 's/,$/\n/'
