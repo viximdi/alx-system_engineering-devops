@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -type f -iname '*.gif' -printf '%f\n' | sort -f | while read file; do echo "${file%.*}"; done | uniq
+find . -type f -name "*.gif" | xargs -I {} sh -c 'name=${}%.*echo "${name,,}"' | sort -f
