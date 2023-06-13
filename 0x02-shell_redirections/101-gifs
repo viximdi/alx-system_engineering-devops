@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -type f -name "*.gif" | xargs -I {} sh -c 'name=${}##*/; echo "${name,,}"' | sort -f
+find . -type f -name "*.gif" | xargs -I {} sh -c 'name=${}##*/; echo "${name,,}"' | sort -f -u
